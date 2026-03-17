@@ -15,7 +15,6 @@ const iconMap = {
   'github': Github,
   'mail': Mail,
   'message-circle': MessageCircle,
-  'instagram': Instagram
 };
 
 export function ContactView({ socialLinks, availability }: ContactViewProps) {

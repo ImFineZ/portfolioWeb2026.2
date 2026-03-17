@@ -89,37 +89,31 @@ export const projects: Project[] = [
 export const socialLinks: SocialLink[] = [
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/greivin',
-    handle: '/in/greivin',
+        url: 'https://linkedin.com/in/greivinrodriguezn',
+        handle: '/in/greivinrodriguezn',
     color: '#0077B5',
     icon: 'linkedin'
   },
   {
     name: 'GitHub',
-    url: 'https://github.com/greivin',
+      url:'https://github.com/ImFineZ',
     handle: '@greivin',
     color: '#E8E8E8',
     icon: 'github'
   },
   {
     name: 'Email',
-    url: 'mailto:greivin@example.com',
-    handle: 'greivin@example.com',
+    url: 'mailto:greivinrodriguez@icloud.com',
+      handle: 'greivinrodriguez@icloud.com',
     color: '#00F5C4',
     icon: 'mail'
   },
   {
     name: 'WhatsApp',
-    url: 'https://wa.me/1234567890',
-    handle: '+1 (234) 567-890',
+      url: 'https://wa.me/+50688018555',
+    handle: '+506 88018555',
     color: '#25D366',
     icon: 'message-circle'
   },
-  {
-    name: 'Instagram',
-    url: 'https://instagram.com/greivin',
-    handle: '@greivin',
-    color: '#E4405F',
-    icon: 'instagram'
-  }
+  
 ];
