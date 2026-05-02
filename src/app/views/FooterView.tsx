@@ -1,7 +1,9 @@
 // View - Footer presentation component
 import { Heart, Terminal } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function FooterView() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -10,13 +12,13 @@ export function FooterView() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 font-['DM_Sans'] text-sm text-[#E8E8E8]/60 dark:text-[#E8E8E8]/60 light:text-[#0A1628]/60">
             <Terminal className="w-4 h-4 text-[#00F5C4]" />
-            <span>© {currentYear} Greivin. All rights reserved.</span>
+            <span>© {currentYear} Greivin. {t('footer.rights')}</span>
           </div>
-          
+
           <div className="flex items-center gap-2 font-['DM_Sans'] text-sm text-[#E8E8E8]/60 dark:text-[#E8E8E8]/60 light:text-[#0A1628]/60">
-            <span>Built with</span>
+            <span>{t('footer.builtWith')}</span>
             <Heart className="w-4 h-4 text-[#00F5C4] fill-[#00F5C4] animate-pulse" />
-            <span>and React</span>
+            <span>{t('footer.andReact')}</span>
           </div>
         </div>
 

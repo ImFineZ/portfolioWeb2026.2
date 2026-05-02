@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "about": "about",
+    "skills": "skills",
+    "projects": "projects",
+    "contact": "contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "title": "Computer Science Engineering Student",
+    "tagline": "Building the future, one commit at a time.",
+    "downloadCV": "Download CV",
+    "terminal": {
+      "role": "CSE Student",
+      "passion": "Software Dev",
+      "status": "Available"
+    }
+  },
+  "about": {
+    "heading": "About",
+    "bio": "I'm a passionate Computer Science Engineering student dedicated to building innovative solutions through code. My journey in tech is driven by curiosity and a commitment to continuous learning. With a strong focus on software development, systems architecture, and agile methodologies, I thrive on transforming ideas into functional, scalable applications.",
+    "focusAreas": "Focus Areas",
+    "focusFullStack": "Full-stack Development",
+    "focusSystemDesign": "System Design",
+    "focusCloud": "Cloud Solutions",
+    "currently": "Currently",
+    "currentlyText": "Building projects with modern frameworks and exploring cloud architecture."
+  },
+  "skills": {
+    "heading": "Skills",
+    "subtitle": "Technologies and tools I work with",
+    "learningPrefix": "Always learning and expanding my skill set. Currently exploring",
+    "learningTopic1": "cloud architecture",
+    "learningTopic2": "microservices",
+    "learningTopic3": "machine learning",
+    "learningAnd": "and"
+  },
+  "projects": {
+    "heading": "Projects",
+    "subtitle": "Some things I've built",
+    "featured": "Featured",
+    "comingSoon": "More projects coming soon...",
+    "viewGithub": "View on GitHub",
+    "viewDemo": "View demo",
+    "descriptions": [
+      "A comprehensive veterinary records management platform built with agile methodology. Features include patient tracking, appointment scheduling, medical history management, and real-time collaboration for veterinary clinics.",
+      "Modern task tracking application with kanban boards, real-time updates, and team collaboration features. Built with React and Node.js backend.",
+      "Interactive weather data visualization dashboard using external APIs. Features include forecast predictions, historical data analysis, and location-based weather tracking."
+    ]
+  },
+  "contact": {
+    "heading": "Contact",
+    "subtitle": "Let's connect and build something amazing together",
+    "availability": "Currently available for internships and collaboration",
+    "reachOut": "Feel free to reach out for projects, opportunities, or just to say hi!"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with",
+    "andReact": "and React"
+  }
+}

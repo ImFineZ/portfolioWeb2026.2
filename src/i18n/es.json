@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "about": "sobre mí",
+    "skills": "habilidades",
+    "projects": "proyectos",
+    "contact": "contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "title": "Estudiante de Ingeniería en Ciencias de la Computación",
+    "tagline": "Construyendo el futuro, un commit a la vez.",
+    "downloadCV": "Descargar CV",
+    "terminal": {
+      "role": "Estudiante ICS",
+      "passion": "Desarrollo de SW",
+      "status": "Disponible"
+    }
+  },
+  "about": {
+    "heading": "Sobre mí",
+    "bio": "Soy un apasionado estudiante de Ingeniería en Computación dedicado a construir soluciones innovadoras a través del código. Mi camino en la tecnología está impulsado por la curiosidad y el compromiso con el aprendizaje continuo. Con un fuerte enfoque en el desarrollo de software, arquitectura de sistemas y metodologías ágiles, disfruto transformar ideas en aplicaciones funcionales y escalables.",
+    "focusAreas": "Áreas de enfoque",
+    "focusFullStack": "Desarrollo Full-stack",
+    "focusSystemDesign": "Diseño de Sistemas",
+    "focusCloud": "Soluciones en la Nube",
+    "currently": "Actualmente",
+    "currentlyText": "Construyendo proyectos con frameworks modernos y explorando arquitectura en la nube."
+  },
+  "skills": {
+    "heading": "Habilidades",
+    "subtitle": "Tecnologías y herramientas con las que trabajo",
+    "learningPrefix": "Siempre aprendiendo y expandiendo mis habilidades. Actualmente explorando",
+    "learningTopic1": "arquitectura en la nube",
+    "learningTopic2": "microservicios",
+    "learningTopic3": "machine learning",
+    "learningAnd": "y"
+  },
+  "projects": {
+    "heading": "Proyectos",
+    "subtitle": "Algunas cosas que he construido",
+    "featured": "Destacado",
+    "comingSoon": "Más proyectos próximamente...",
+    "viewGithub": "Ver en GitHub",
+    "viewDemo": "Ver demo",
+    "descriptions": [
+      "Una plataforma integral de gestión de registros veterinarios construida con metodología ágil. Las funciones incluyen seguimiento de pacientes, programación de citas, gestión del historial médico y colaboración en tiempo real para clínicas veterinarias.",
+      "Aplicación moderna de seguimiento de tareas con tableros kanban, actualizaciones en tiempo real y funciones de colaboración en equipo. Desarrollada con React y backend en Node.js.",
+      "Panel interactivo de visualización de datos meteorológicos usando APIs externas. Incluye predicciones de pronóstico, análisis de datos históricos y seguimiento del clima por ubicación."
+    ]
+  },
+  "contact": {
+    "heading": "Contacto",
+    "subtitle": "Conectemos y construyamos algo increíble juntos",
+    "availability": "Actualmente disponible para pasantías y colaboraciones",
+    "reachOut": "¡No dudes en contactarme para proyectos, oportunidades o simplemente para saludar!"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "builtWith": "Hecho con",
+    "andReact": "y React"
+  }
+}

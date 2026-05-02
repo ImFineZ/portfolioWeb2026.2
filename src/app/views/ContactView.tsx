@@ -2,7 +2,8 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
-import { Linkedin, Github, Mail, Instagram, MessageCircle } from 'lucide-react';
+import { Linkedin, Github, Mail, MessageCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { SocialLink } from '../models/PortfolioData';
 
 interface ContactViewProps {
@@ -18,6 +19,7 @@ const iconMap = {
 };
 
 export function ContactView({ socialLinks, availability }: ContactViewProps) {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -30,10 +32,10 @@ export function ContactView({ socialLinks, availability }: ContactViewProps) {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-['Space_Mono'] text-4xl md:text-5xl font-bold text-[#E8E8E8] dark:text-[#E8E8E8] light:text-[#0A1628] mb-4">
-            <span className="text-[#00F5C4]">&lt;</span>Contact<span className="text-[#00F5C4]"> /&gt;</span>
+            <span className="text-[#00F5C4]">&lt;</span>{t('contact.heading')}<span className="text-[#00F5C4]"> /&gt;</span>
           </h2>
           <p className="font-['DM_Sans'] text-[#E8E8E8]/60 dark:text-[#E8E8E8]/60 light:text-[#0A1628]/60 mb-12">
-            Let's connect and build something amazing together
+            {t('contact.subtitle')}
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -63,7 +65,7 @@ export function ContactView({ socialLinks, availability }: ContactViewProps) {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="absolute inset-0 bg-gradient-to-br from-[#00F5C4]/0 to-[#00F5C4]/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
                 </motion.a>
               );
@@ -83,7 +85,7 @@ export function ContactView({ socialLinks, availability }: ContactViewProps) {
               {availability}
             </p>
             <p className="font-['DM_Sans'] text-sm text-[#E8E8E8]/60 dark:text-[#E8E8E8]/60 light:text-[#0A1628]/60">
-              Feel free to reach out for projects, opportunities, or just to say hi!
+              {t('contact.reachOut')}
             </p>
           </motion.div>
         </motion.div>

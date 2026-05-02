@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Project } from '../models/PortfolioData';
 
 interface ProjectsViewProps {
@@ -10,6 +11,7 @@ interface ProjectsViewProps {
 }
 
 export function ProjectsView({ projects }: ProjectsViewProps) {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -22,10 +24,10 @@ export function ProjectsView({ projects }: ProjectsViewProps) {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-['Space_Mono'] text-4xl md:text-5xl font-bold text-[#E8E8E8] dark:text-[#E8E8E8] light:text-[#0A1628] mb-4">
-            <span className="text-[#00F5C4]">&lt;</span>Projects<span className="text-[#00F5C4]"> /&gt;</span>
+            <span className="text-[#00F5C4]">&lt;</span>{t('projects.heading')}<span className="text-[#00F5C4]"> /&gt;</span>
           </h2>
           <p className="font-['DM_Sans'] text-[#E8E8E8]/60 dark:text-[#E8E8E8]/60 light:text-[#0A1628]/60 mb-12">
-            Some things I've built
+            {t('projects.subtitle')}
           </p>
 
           <div className="space-y-6">
@@ -45,7 +47,7 @@ export function ProjectsView({ projects }: ProjectsViewProps) {
                       <div className="flex items-center gap-2 mb-2">
                         {project.featured && (
                           <span className="font-['Space_Mono'] text-xs px-2 py-1 bg-[#00F5C4]/20 text-[#00F5C4] rounded border border-[#00F5C4]/30">
-                            Featured
+                            {t('projects.featured')}
                           </span>
                         )}
                       </div>
@@ -57,14 +59,14 @@ export function ProjectsView({ projects }: ProjectsViewProps) {
                       <a
                         href={project.github}
                         className="p-2 rounded-lg bg-[#00F5C4]/10 hover:bg-[#00F5C4]/20 transition-colors group/icon"
-                        aria-label="View on GitHub"
+                        aria-label={t('projects.viewGithub')}
                       >
                         <Github className="w-5 h-5 text-[#00F5C4] group-hover/icon:scale-110 transition-transform" />
                       </a>
                       <a
                         href={project.demo}
                         className="p-2 rounded-lg bg-[#00F5C4]/10 hover:bg-[#00F5C4]/20 transition-colors group/icon"
-                        aria-label="View demo"
+                        aria-label={t('projects.viewDemo')}
                       >
                         <ExternalLink className="w-5 h-5 text-[#00F5C4] group-hover/icon:scale-110 transition-transform" />
                       </a>
@@ -99,7 +101,7 @@ export function ProjectsView({ projects }: ProjectsViewProps) {
             className="mt-12 text-center"
           >
             <p className="font-['DM_Sans'] text-[#E8E8E8]/60 dark:text-[#E8E8E8]/60 light:text-[#0A1628]/60">
-              More projects coming soon...
+              {t('projects.comingSoon')}
             </p>
           </motion.div>
         </motion.div>

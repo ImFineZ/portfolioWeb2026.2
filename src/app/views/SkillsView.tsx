@@ -2,6 +2,7 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Skill } from '../models/PortfolioData';
 
 interface SkillsViewProps {
@@ -9,6 +10,7 @@ interface SkillsViewProps {
 }
 
 export function SkillsView({ skills }: SkillsViewProps) {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -21,10 +23,10 @@ export function SkillsView({ skills }: SkillsViewProps) {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-['Space_Mono'] text-4xl md:text-5xl font-bold text-[#E8E8E8] dark:text-[#E8E8E8] light:text-[#0A1628] mb-4">
-            <span className="text-[#00F5C4]">&lt;</span>Skills<span className="text-[#00F5C4]"> /&gt;</span>
+            <span className="text-[#00F5C4]">&lt;</span>{t('skills.heading')}<span className="text-[#00F5C4]"> /&gt;</span>
           </h2>
           <p className="font-['DM_Sans'] text-[#E8E8E8]/60 dark:text-[#E8E8E8]/60 light:text-[#0A1628]/60 mb-12">
-            Technologies and tools I work with
+            {t('skills.subtitle')}
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
@@ -54,8 +56,9 @@ export function SkillsView({ skills }: SkillsViewProps) {
               // console.log()
             </div>
             <p className="font-['DM_Sans'] text-[#E8E8E8]/70 dark:text-[#E8E8E8]/70 light:text-[#0A1628]/70">
-              Always learning and expanding my skill set. Currently exploring <span className="text-[#00F5C4]">cloud architecture</span>, 
-              <span className="text-[#00F5C4]"> microservices</span>, and <span className="text-[#00F5C4]">machine learning</span>.
+              {t('skills.learningPrefix')} <span className="text-[#00F5C4]">{t('skills.learningTopic1')}</span>,{' '}
+              <span className="text-[#00F5C4]">{t('skills.learningTopic2')}</span>, {t('skills.learningAnd')}{' '}
+              <span className="text-[#00F5C4]">{t('skills.learningTopic3')}</span>.
             </p>
           </motion.div>
         </motion.div>

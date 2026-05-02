@@ -3,12 +3,14 @@ import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { Code2, Terminal, Zap } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface AboutViewProps {
   bio: string;
 }
 
 export function AboutView({ bio }: AboutViewProps) {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -21,9 +23,9 @@ export function AboutView({ bio }: AboutViewProps) {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-['Space_Mono'] text-4xl md:text-5xl font-bold text-[#E8E8E8] dark:text-[#E8E8E8] light:text-[#0A1628] mb-4">
-            <span className="text-[#00F5C4]">&lt;</span>About<span className="text-[#00F5C4]"> /&gt;</span>
+            <span className="text-[#00F5C4]">&lt;</span>{t('about.heading')}<span className="text-[#00F5C4]"> /&gt;</span>
           </h2>
-          
+
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -54,12 +56,12 @@ export function AboutView({ bio }: AboutViewProps) {
               >
                 <Code2 className="w-6 h-6 text-[#00F5C4] mb-3" />
                 <div className="font-['Space_Mono'] text-sm text-[#E8E8E8] dark:text-[#E8E8E8] light:text-[#0A1628] font-semibold mb-2">
-                  Focus Areas
+                  {t('about.focusAreas')}
                 </div>
                 <ul className="font-['DM_Sans'] text-sm text-[#E8E8E8]/70 dark:text-[#E8E8E8]/70 light:text-[#0A1628]/70 space-y-1">
-                  <li>• Full-stack Development</li>
-                  <li>• System Design</li>
-                  <li>• Cloud Solutions</li>
+                  <li>• {t('about.focusFullStack')}</li>
+                  <li>• {t('about.focusSystemDesign')}</li>
+                  <li>• {t('about.focusCloud')}</li>
                 </ul>
               </motion.div>
 
@@ -71,10 +73,10 @@ export function AboutView({ bio }: AboutViewProps) {
               >
                 <Zap className="w-6 h-6 text-[#00F5C4] mb-3" />
                 <div className="font-['Space_Mono'] text-sm text-[#E8E8E8] dark:text-[#E8E8E8] light:text-[#0A1628] font-semibold mb-2">
-                  Currently
+                  {t('about.currently')}
                 </div>
                 <p className="font-['DM_Sans'] text-sm text-[#E8E8E8]/70 dark:text-[#E8E8E8]/70 light:text-[#0A1628]/70">
-                  Building projects with modern frameworks and exploring cloud architecture.
+                  {t('about.currentlyText')}
                 </p>
               </motion.div>
             </div>

@@ -1,6 +1,7 @@
 // View - Hero section presentation component
 import { Download } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 
 interface HeroViewProps {
   name: string;
@@ -11,6 +12,8 @@ interface HeroViewProps {
 }
 
 export function HeroView({ name, title, displayedTagline, showCursor, onDownloadCV }: HeroViewProps) {
+  const { t } = useTranslation();
+
   return (
     <section id="hero" className="min-h-screen flex items-center pt-20 pb-12 px-6">
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -22,7 +25,7 @@ export function HeroView({ name, title, displayedTagline, showCursor, onDownload
         >
           <div className="space-y-2">
             <p className="text-[#00F5C4] font-['DM_Sans'] text-sm tracking-wider uppercase">
-              Hello, I'm
+              {t('hero.greeting')}
             </p>
             <h1 className="font-['Space_Mono'] text-5xl md:text-7xl font-bold text-[#E8E8E8] dark:text-[#E8E8E8] light:text-[#0A1628]">
               {name}
@@ -32,22 +35,22 @@ export function HeroView({ name, title, displayedTagline, showCursor, onDownload
               {title}
             </h2>
           </div>
-          
+
           <p className="font-['Space_Mono'] text-base md:text-lg text-[#00F5C4]/90 min-h-[3rem]">
             {displayedTagline}
           </p>
-          
+
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onDownloadCV}
             className="group relative inline-flex items-center gap-2 px-8 py-4 bg-[#00F5C4] text-[#0D0D0D] font-['DM_Sans'] font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,245,196,0.5)]"
           >
-            <span className="relative z-10">Download CV</span>
+            <span className="relative z-10">{t('hero.downloadCV')}</span>
             <Download className="relative z-10 w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
             <div className="absolute inset-0 bg-[#0D0D0D] dark:bg-[#0D0D0D] light:bg-[#F5F5F0] scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
             <span className="absolute inset-0 flex items-center justify-center gap-2 text-[#00F5C4] opacity-0 group-hover:opacity-100 transition-opacity">
-              <span>Download CV</span>
+              <span>{t('hero.downloadCV')}</span>
               <Download className="w-5 h-5" />
             </span>
           </motion.button>
@@ -74,16 +77,16 @@ export function HeroView({ name, title, displayedTagline, showCursor, onDownload
                   <span className="text-[#00F5C4]">const</span> greivin = {'{'}
                 </div>
                 <div className="pl-4 text-[#E8E8E8]/70 dark:text-[#E8E8E8]/70 light:text-[#0A1628]/70">
-                  role: <span className="text-[#00F5C4]">"CSE Student"</span>,
+                  role: <span className="text-[#00F5C4]">"{t('hero.terminal.role')}"</span>,
                 </div>
                 <div className="pl-4 text-[#E8E8E8]/70 dark:text-[#E8E8E8]/70 light:text-[#0A1628]/70">
                   skills: [<span className="text-[#00F5C4]">"JavaScript"</span>, <span className="text-[#00F5C4]">"Python"</span>],
                 </div>
                 <div className="pl-4 text-[#E8E8E8]/70 dark:text-[#E8E8E8]/70 light:text-[#0A1628]/70">
-                  passion: <span className="text-[#00F5C4]">"Software Dev"</span>,
+                  passion: <span className="text-[#00F5C4]">"{t('hero.terminal.passion')}"</span>,
                 </div>
                 <div className="pl-4 text-[#E8E8E8]/70 dark:text-[#E8E8E8]/70 light:text-[#0A1628]/70">
-                  status: <span className="text-[#00F5C4]">"Available"</span>
+                  status: <span className="text-[#00F5C4]">"{t('hero.terminal.status')}"</span>
                 </div>
                 <div className="text-[#E8E8E8]/40 dark:text-[#E8E8E8]/40 light:text-[#0A1628]/40">
                   {'}'};
